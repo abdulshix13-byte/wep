@@ -1,0 +1,40 @@
+<section>
+<h3>Hastane Randevu Formu</h3>
+
+<div class="example-box">
+<form>
+
+<label>Doktor Seçimi:</label><br>
+<select>
+  <option>Dr. Ayşe Yılmaz</option>
+  <option>Dr. Mehmet Kaya</option>
+  <option>Dr. Zeynep Demir</option>
+  <option>Dr. Ali Çelik</option>
+</select>
+<br><br>
+
+<label>Bölüm Seçimi:</label><br>
+<select>
+  <option>Kardiyoloji</option>
+  <option>Göz Hastalıkları</option>
+  <option>Ortopedi</option>
+  <option>Dahiliye</option>
+  <option>Dermatoloji</option>
+</select>
+<br><br>
+
+<label>Şikayetiniz:</label><br>
+<textarea rows="4" cols="40" placeholder="Şikayetinizi yazınız..."></textarea>
+<br><br>
+
+<label>Randevu Tarihi:</label><br>
+<input type="date" />
+<br><br>
+
+<button type="submit">Randevuyu Onayla</button>
+
+</form>
+</div>
+
+<div class="screenshot">Ekran görüntüsü: Hastane Randevu Formu örneği</div>
+</section>
