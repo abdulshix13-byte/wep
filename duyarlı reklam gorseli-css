@@ -1,0 +1,15 @@
+div {
+    text-align: center;
+}
+
+/* 215px ve altı */
+@media screen and (max-width: 215px) {
+    #kucukReklam { display: inline; }
+    #buyukReklam { display: none; }
+}
+
+/* 750px ve üstü */
+@media screen and (min-width: 750px) {
+    #buyukReklam { display: inline; }
+    #kucukReklam { display: none; }
+}
