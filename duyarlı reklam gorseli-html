@@ -1,0 +1,4 @@
+<div class="reklamAlani">
+    <img src="https://picsum.photos/215/120" id="kucukReklam" alt="Küçük Reklam">
+    <img src="https://picsum.photos/750/240" id="buyukReklam" alt="Büyük Reklam">
+</div>
