@@ -1,0 +1,33 @@
+body{
+  height:2000px; /* kaydırma olsun diye */
+  margin:0;
+  font-family: Arial;
+}
+
+/* Sağ içerik bölümü */
+.icerik{
+  width:200px;
+  height:600px;
+  background:#20b2aa;
+  margin:50px auto;
+  text-align:center;
+  padding-top:20px;
+  color:black;
+}
+
+/* Kaydırma tuşu */
+#kaydirmaCubugu{
+  position: fixed;   /* 🔴 absolute DEĞİL */
+  bottom: 60px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
