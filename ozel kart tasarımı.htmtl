@@ -1,0 +1,23 @@
+<div class="kart">
+  <div class="profilSablon">
+    <div class="profilResim p1"></div>
+  </div>
+  <p><b>Personel 1</b><br>Personel ile ilgili bilgiler buraya yazılacaktır.</p>
+  <hr>
+</div>
+
+<div class="kart">
+  <div class="profilSablon">
+    <div class="profilResim p2"></div>
+  </div>
+  <p><b>Personel 2</b><br>Personel ile ilgili bilgiler buraya yazılacaktır.</p>
+  <hr>
+</div>
+
+<div class="kart">
+  <div class="profilSablon">
+    <div class="profilResim p3"></div>
+  </div>
+  <p><b>Personel 3</b><br>Personel ile ilgili bilgiler buraya yazılacaktır.</p>
+  <hr>
+</div>
