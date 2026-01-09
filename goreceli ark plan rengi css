@@ -1,0 +1,30 @@
+body {
+  background-color: #a8dadc;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  padding-top: 50px;
+}
+
+
+@media screen and (min-width: 600px) {A
+  body {
+    background-color: #e76f51;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: #457b9d;
+  }
+}
+
+/* En az 1200px */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: #e9c46a;
+    color: black;
+  }
+}
