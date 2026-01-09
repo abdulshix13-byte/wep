@@ -1,0 +1,38 @@
+html
+  <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Class ve ID Seçici</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <span class="harf" id="ozelHarf">
+        <b>J</b>
+    </span>
+
+    <span class="harf"><b>S</b></span>
+    <span class="harf"><b>C</b></span>
+    <span class="harf"><b>R</b></span>
+    <span class="harf"><b>I</b></span>
+    <span class="harf"><b>P</b></span>
+    <span class="harf"><b>T</b></span>
+
+</body>
+</html>
+
+
+    css
+    body {
+    background-color: orange;
+}
+
+.harf {
+    font-size: 30px;
+}
+
+#ozelHarf {
+    font-size: 40px;
+    color: white;
+}
