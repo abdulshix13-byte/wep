@@ -1,0 +1,69 @@
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Servis Talep Formu</title>
+
+<style>
+ body {
+   font-family: Arial, sans-serif;
+   padding: 20px;
+ }
+ h1 {
+   color: #2c3e50;
+ }
+ .form-kutu {
+   border: 1px solid #ccc;
+   padding: 20px;
+   width: 360px;
+   border-radius: 8px;
+   background-color: #f9f9f9;
+ }
+ label {
+   font-weight: bold;
+ }
+</style>
+</head>
+
+<body>
+
+<h1>Otomotiv – Servis Talep Formu</h1>
+
+<div class="form-kutu">
+<form>
+
+<label>Araç Markası:</label><br>
+<input type="text">
+<br><br>
+
+<label>Araç Modeli:</label><br>
+<input type="text">
+<br><br>
+
+<label>Araç Kilometresi:</label><br>
+<input type="number">
+<br><br>
+
+<label>Yakıt Türü:</label><br>
+<select>
+  <option>Benzin</option>
+  <option>Dizel</option>
+  <option>Elektrik</option>
+  <option>Hibrit</option>
+</select>
+<br><br>
+
+<label>Servis Tarihi:</label><br>
+<input type="date">
+<br><br>
+
+<label>Arıza / Sorun Açıklaması:</label><br>
+<textarea rows="4" cols="40"></textarea>
+<br><br>
+
+<button type="submit">Servis Talebi Gönder</button>
+
+</form>
+</div>
+
+</body>
+</html>
