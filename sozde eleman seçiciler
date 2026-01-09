@@ -1,0 +1,41 @@
+html
+<div>
+  <p>
+    Makine dili "1" ve "0" lardan oluşan kod blokları ile yazılır.
+    Makine dilinde kod yazılması ve yazılan kodun anlaşılması oldukça zordur.
+  </p>
+
+  <p>
+    "0" sayısı ilk olarak Hârezmî tarafından tanımlanmıştır.
+  </p>
+</div>
+
+
+css
+body {
+  background-color: white;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* Ana kutu */
+div {
+  width: 250px;
+  background-color: indigo;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* İlk harf */
+p::first-letter {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* İlk satır */
+p::first-line {
+  background-color: orange;
+  color: black;
+}
