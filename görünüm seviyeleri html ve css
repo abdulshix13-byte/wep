@@ -1,0 +1,39 @@
+html
+<!-- Büyük kutular (blok seviye) -->
+<div class="buyuk">KUTU 1</div>
+<div class="buyuk">KUTU 2</div>
+
+<br><br>
+
+<!-- Küçük kutular (satır içi seviye) -->
+<div class="kucuk">KUTU 1</div>
+<div class="kucuk">KUTU 2</div>
+
+
+css
+body {
+  background-color: mediumpurple;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* Büyük kutular (blok görünüm) */
+.buyuk {
+  background-color: orange;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  display: block;
+}
+
+/* Küçük kutular (satır içi görünüm) */
+.kucuk {
+  background-color: orange;
+  width: 70px;
+  height: 30px;
+  margin: 5px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+}
