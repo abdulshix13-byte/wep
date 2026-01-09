@@ -1,0 +1,85 @@
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Uçuş Arama Formu</title>
+
+<style>
+ body {
+   font-family: Arial, sans-serif;
+   padding: 20px;
+ }
+ h1 {
+   color: #2c3e50;
+ }
+ .form-kutu {
+   border: 1px solid #ccc;
+   padding: 20px;
+   width: 350px;
+   border-radius: 8px;
+   background-color: #f9f9f9;
+ }
+ label {
+   font-weight: bold;
+ }
+</style>
+</head>
+
+<body>
+
+<h1>Seyahat – Uçuş Arama</h1>
+
+<div class="form-kutu">
+<form>
+
+<!-- Uçuş Türü -->
+<label>Uçuş Türü:</label><br>
+<input type="radio" name="ucus"> Tek Yön <br>
+<input type="radio" name="ucus"> Gidiş - Dönüş
+<br><br>
+
+<!-- Kalkış -->
+<label>Kalkış Şehri:</label><br>
+<select>
+  <option>İstanbul</option>
+  <option>Ankara</option>
+  <option>İzmir</option>
+  <option>Antalya</option>
+</select>
+<br><br>
+
+<!-- Varış -->
+<label>Varış Şehri:</label><br>
+<select>
+  <option>İstanbul</option>
+  <option>Ankara</option>
+  <option>İzmir</option>
+  <option>Antalya</option>
+</select>
+<br><br>
+
+<!-- Tarihler -->
+<label>Gidiş Tarihi:</label><br>
+<input type="date">
+<br><br>
+
+<label>Dönüş Tarihi:</label><br>
+<input type="date">
+<br><br>
+
+<!-- Yolcu Sayısı -->
+<label>Yolcu Sayısı:</label><br>
+<select>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+</select>
+<br><br>
+
+<button type="submit">Uçuş Ara</button>
+
+</form>
+</div>
+
+</body>
+</html>
