@@ -1,0 +1,41 @@
+html
+<div class="profil">
+  <b>KULLANICI PROFİLİ</b>
+  <hr>
+
+  <img src="https://i.pravatar.cc/100?img=5">
+
+  <b>Zeynep</b>
+
+  <p>
+    <b>HTML, CSS kodlayabiliyor.</b>
+  </p>
+</div>
+
+
+  css
+  body {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* Ana kutu */
+div {
+  background-color: darkcyan;
+  border: 2px solid black;
+  width: 400px;
+  padding: 15px;
+}
+
+/* Çocuk seçici ile resim */
+div > img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Çocuk seçici ile sadece div içindeki b etiketleri */
+div > b {
+  color: white;
+}
