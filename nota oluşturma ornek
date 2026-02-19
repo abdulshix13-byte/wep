@@ -1,0 +1,37 @@
+HTML
+
+<h3 id="potre"></h3>
+
+<input type="button" onclick="melodiBaslat()" value="Melodi Başlat">
+<input type="button" onclick="melodiDurdur()" value="Melodi Durdur">
+
+
+CSS
+
+body {
+  text-align: center;
+  font-family: Arial;
+  margin-top: 100px;
+}
+
+h3 {
+  font-size: 28px;
+  color: darkblue;
+}
+
+
+JS
+
+let notalar = ["fa", "la", "do", "si", "la", "sol", "re"];
+let zamanlayici;
+
+function melodiBaslat() {
+  zamanlayici = setInterval(function () {
+    let rastgele = Math.floor(Math.random() * 7);
+    document.getElementById("potre").innerHTML += notalar[rastgele] + " ";
+  }, 2000);
+}
+
+function melodiDurdur() {
+  clearInterval(zamanlayici);
+}
