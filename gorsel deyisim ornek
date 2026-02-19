@@ -1,0 +1,64 @@
+HTML
+
+<div class="galeri">
+  <img id="buyukResim" src="https://picsum.photos/id/237/500/300">
+
+  <div class="butonlar">
+    <button onclick="resim1()">Resim 1</button>
+    <button onclick="resim2()">Resim 2</button>
+    <button onclick="resim3()">Resim 3</button>
+  </div>
+</div>
+
+
+
+ CSS
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial;
+  text-align: center;
+}
+
+.galeri {
+  width: 520px;
+  margin: 50px auto;
+  padding: 15px;
+  background-color: orange;
+  border-radius: 10px;
+}
+
+#buyukResim {
+  width: 500px;
+  height: 300px;
+  border: 5px solid white;
+}
+
+.butonlar {
+  margin-top: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+ JS
+
+function resim1() {
+  document.getElementById("buyukResim").src = 
+    "https://picsum.photos/id/237/500/300";
+}
+
+function resim2() {
+  document.getElementById("buyukResim").src = 
+    "https://picsum.photos/id/238/500/300";
+}
+
+function resim3() {
+  document.getElementById("buyukResim").src = 
+    "https://picsum.photos/id/239/500/300";
+}
+
