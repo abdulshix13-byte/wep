@@ -1,0 +1,67 @@
+HTML
+
+<div class="container">
+  <h3>Web sayfasını koyu modda kullanmak ister misiniz?</h3>
+
+  <label>
+    <input type="radio" name="mod" id="evet" value="dark">
+    Evet
+  </label>
+  <br>
+
+  <label>
+    <input type="radio" name="mod" id="hayir" value="light" checked>
+    Hayır
+  </label>
+  <br><br>
+
+  <button onclick="modAyarla()">Mod Ayarla</button>
+</div>
+
+CSS
+
+body {
+  font-family: Arial, sans-serif;
+  transition: 0.4s;
+}
+
+.container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background: #eee;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Koyu Mod */
+.dark-mode {
+  background-color: #111;
+  color: white;
+}
+
+/* Açık Mod */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+
+JS
+
+function modAyarla() {
+
+  let evet = document.getElementById("evet").checked;
+  let hayir = document.getElementById("hayir").checked;
+
+  if (evet) {
+    document.body.classList.remove("light-mode");
+    document.body.classList.add("dark-mode");
+  }
+
+  if (hayir) {
+    document.body.classList.remove("dark-mode");
+    document.body.classList.add("light-mode");
+  }
+
+}
