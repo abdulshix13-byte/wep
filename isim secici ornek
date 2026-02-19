@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Name ve TagName Seçici</title>
+</head>
+<body>
+
+<h3>Name (İsim) Seçici Örneği</h3>
+
+<input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı">
+<input type="text" name="kullaniciAdi" placeholder="Kullanıcı Adı Tekrar">
+
+<button onclick="arkaPlanDegistir()">Arka Planı Değiştir</button>
+
+<hr>
+
+<h3>TagName (Etiket) Seçici Örneği</h3>
+
+<span>Birinci</span><br>
+<span>İkinci</span><br>
+<span>Üçüncü</span><br>
+<span>Dördüncü</span><br><br>
+
+<button onclick="kenarlikEkle()">Alt Kenarlık Ekle</button>
+
+<script>
+function arkaPlanDegistir(){
+    document.getElementsByName("kullaniciAdi")[0].style.backgroundColor = "red";
+}
+
+function kenarlikEkle(){
+    document.getElementsByTagName("span")[2].style.borderBottomStyle = "solid";
+    document.getElementsByTagName("span")[2].style.borderBottomWidth = "2px";
+}
+</script>
+
+</body>
+</html>
