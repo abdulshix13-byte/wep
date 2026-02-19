@@ -1,0 +1,110 @@
+HTML
+
+<div class="chat-container">
+  <div class="top-bar">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="avatar">
+    <input type="text" id="mesajInput" placeholder="Mesajınızı giriniz...">
+    <button onclick="mesajEkle()">Gönder</button>
+  </div>
+
+  <div class="mesaj-alani" id="mesajAlani">
+    <!-- Mesajlar buraya eklenecek -->
+  </div>
+</div>
+
+CSS
+
+body {
+  background: #ddd;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.chat-container {
+  width: 350px;
+  background: #cfe8f3;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.top-bar {
+  background: #f0f0f0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.top-bar input {
+  flex: 1;
+  padding: 5px;
+}
+
+.top-bar button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.mesaj-alani {
+  padding: 10px;
+}
+
+.mesaj {
+  background: white;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.saat {
+  font-size: 11px;
+  color: gray;
+}
+
+
+JS
+
+unction mesajEkle() {
+  let input = document.getElementById("mesajInput");
+  let mesaj = input.value.trim();
+
+  if (mesaj === "") {
+    alert("Lütfen mesaj giriniz!");
+    return;
+  }
+
+  let saat = new Date();
+  let saatStr =
+    saat.getHours().toString().padStart(2, "0") + ":" +
+    saat.getMinutes().toString().padStart(2, "0");
+
+  let mesajDiv = document.createElement("div");
+  mesajDiv.className = "mesaj";
+  mesajDiv.innerHTML = `
+    <span>${mesaj}</span>
+    <span class="saat">${saatStr}</span>
+  `;
+
+  document.getElementById("mesajAlani").appendChild(mesajDiv);
+
+  input.value = "";
+}
+document.getElementById("mesajInput")
+  .addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      mesajEkle();
+    }
+});
+
