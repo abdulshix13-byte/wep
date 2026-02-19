@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kare Alma</title>
+
+<script>
+function kareAl(a){
+    var sayi = a.value;          // inputtan gelen değer
+    sayi = Number(sayi);         // sayıya çevirme
+    var sonuc = sayi * sayi;     // karesini alma
+    document.getElementById("sonuc").innerHTML = sonuc;  // sonucu yazdırma
+}
+</script>
+
+</head>
+<body>
+
+<form>
+    <input type="text" placeholder="Sayı giriniz." value="0" onkeypress="kareAl(this)">
+    <p id="sonuc">0</p>
+</form>
+
+</body>
+</html>
