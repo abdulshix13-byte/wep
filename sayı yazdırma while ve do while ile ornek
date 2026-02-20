@@ -1,0 +1,56 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>While - Do While</title>
+</head>
+<body>
+
+  <h2>15. Uygulama</h2>
+  <button onclick="yazdir()">Sayıları Yazdır</button>
+
+  <div id="sonuc"></div>
+
+</body>
+</html>
+
+CSS
+
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+#sonuc {
+  margin-top: 20px;
+  white-space: pre-line;
+}
+
+JS
+
+function yazdir() {
+  let sonuc = document.getElementById("sonuc");
+  sonuc.innerHTML = "";
+
+  // WHILE → 0'dan 10'a kadar
+  let i = 0;
+  sonuc.innerHTML += "While (0'dan 10'a):\n";
+
+  while (i <= 10) {
+    sonuc.innerHTML += i + " ";
+    i++;
+  }
+
+  sonuc.innerHTML += "\n\n";
+
+  // DO-WHILE → 10'dan 0'a kadar
+  let j = 10;
+  sonuc.innerHTML += "Do-While (10'dan 0'a):\n";
+
+  do {
+    sonuc.innerHTML += j + " ";
+    j--;
+  } while (j >= 0);
+}
