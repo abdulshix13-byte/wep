@@ -1,0 +1,98 @@
+HTML
+
+<div class="wrapper">
+  <h3>13. Uygulama</h3>
+  <p>
+    Dizi içinde tanımlanmış renkler ile sekiz adet kutuyu rastgele boyama işlemini yapınız.
+  </p>
+
+  <!-- 1. Satır -->
+  <div class="row">
+    <div class="boxes" id="boxes1"></div>
+    <button onclick="changeColors('boxes1')">Renkleri Değiştir</button>
+  </div>
+
+  <!-- 2. Satır -->
+  <div class="row">
+    <div class="boxes" id="boxes2"></div>
+    <button onclick="changeColors('boxes2')">Renkleri Değiştir</button>
+  </div>
+
+  <p class="caption">Görsel 5.16: Renkli kutular</p>
+</div>
+
+  CSS
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 40px auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.boxes {
+  display: flex;
+  gap: 5px;
+}
+
+.box {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 35px;
+  background: #eee;
+  font-weight: bold;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+JS
+
+const colors = ["red", "blue", "green", "yellow", "orange", "pink", "purple", "gray"];
+
+// Sayfa açıldığında kutuları oluştur
+window.onload = function () {
+  createBoxes("boxes1");
+  createBoxes("boxes2");
+};
+
+function createBoxes(containerId) {
+  const container = document.getElementById(containerId);
+
+  for (let i = 1; i <= 8; i++) {
+    const div = document.createElement("div");
+    div.classList.add("box");
+    div.textContent = i;
+    container.appendChild(div);
+  }
+}
+
+function changeColors(containerId) {
+  const container = document.getElementById(containerId);
+  const boxes = container.children;
+
+  for (let box of boxes) {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    box.style.backgroundColor = randomColor;
+  }
+}
