@@ -1,0 +1,70 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sıra Sizde</title>
+</head>
+<body>
+
+  <div class="kutu">
+    <h2>Sıra Sizde</h2>
+    <p>
+      Bir dizi oluşturarak diziye 100 adet rastgele sayı aktarınız.
+      Dizideki elemanları büyükten küçüğe sıralayıp div elemanı içinde ekrana yazdırınız.
+    </p>
+
+    <button onclick="uret()">Sayıları Oluştur</button>
+
+    <div id="sonuc"></div>
+  </div>
+
+</body>
+</html>
+
+CSS
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 30px;
+}
+
+.kutu {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 8px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#sonuc {
+  margin-top: 20px;
+  word-wrap: break-word;
+}
+
+JS
+
+function uret() {
+  let dizi = [];
+
+  // 100 adet rastgele sayı üret (0-999 arası)
+  for (let i = 0; i < 100; i++) {
+    let sayi = Math.floor(Math.random() * 1000);
+    dizi.push(sayi);
+  }
+
+  // Büyükten küçüğe sırala
+  dizi.sort(function(a, b) {
+    return b - a;
+  });
+
+  // Div içine yazdır
+  document.getElementById("sonuc").innerHTML = dizi.join(", ");
+}
